@@ -9,6 +9,7 @@ namespace DelegatesLab
         static void Main(string[] args)
         {
             Notify notifier = (m) => { Console.WriteLine(m); };
+            notifier += (m) => { Console.WriteLine(" Message : " + m); };
 
             WorkStarted(notifier);
             WorkFinished(notifier);
